@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #111;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  height: 80vh;
+  background: url('../images/hero.jpg') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.services {
+  padding: 40px;
+  text-align: center;
+}
+
+.card {
+  margin: 15px;
+  padding: 20px;
+  background: #f4f4f4;
+  display: inline-block;
+}
+
+/* Mobile Responsive */
+@media(max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
