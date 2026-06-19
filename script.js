@@ -1,17 +1,19 @@
-function validateForm() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-  if (name === "" || email === "") {
-    alert("All fields are required!");
-    return false;
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  if (name === "" || email === "" || message === "") {
+    alert("Please fill all fields");
+    return;
   }
 
   if (!email.includes("@")) {
-    alert("Invalid email!");
-    return false;
+    alert("Invalid email format");
+    return;
   }
 
-  alert("Form submitted successfully!");
-  return true;
-}
+  alert("Message sent successfully!");
+});
